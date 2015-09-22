@@ -22,3 +22,6 @@ spacebars
 check
 urigo:angular
 http
+accounts-password
+accounts-ui
+accounts-facebook

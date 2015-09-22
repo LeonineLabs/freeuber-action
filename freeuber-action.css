@@ -11,3 +11,11 @@
 .mdl-layout__header {
 	background-color: #000 !important;
 }
+
+a {
+	text-decoration: none !important;
+}
+
+.login-link-text {
+	color: #fff;
+}
