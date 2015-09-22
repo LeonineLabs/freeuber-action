@@ -1,14 +1,239 @@
 <head>
-  <title>freeuber-action</title>
+  <title>FREE UBER</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <script src="/components/material-design-lite/material.js"></script>
+  <link  href="/components/material-design-lite/material.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+	<!-- Always shows a header, even in smaller screens. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	  <header class="mdl-layout__header">
+	    <div class="mdl-layout__header-row">
+	      <!-- Title -->
+	      <span class="mdl-layout-title">FREE UBER</span>
+	      <!-- Add spacer, to align navigation to the right -->
+	      <div class="mdl-layout-spacer"></div>
+	      <!-- Navigation. We hide it in small screens. -->
+	      <nav class="mdl-navigation mdl-layout--large-screen-only">
+	        <a class="mdl-navigation__link" href="http://freeuber.org">Homepage</a>
+	        <a class="mdl-navigation__link" href="">Log In</a>
+	      </nav>
+	    </div>
+	  </header>
 
-  {{> hello}}
+	  <main class="mdl-layout__content">
+	    <div class="page-content">
+
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--5-col">{{> tasks}}</div>				  
+				  <div class="mdl-cell mdl-cell--4-col">
+				  	{{> leaders}}
+				  	{{> reportTask}}
+				  	{{> roadmap}}
+			  	</div>
+				  <div class="mdl-cell mdl-cell--3-col">{{> prizes}}</div>
+				</div>
+	   
+	    </div>
+	  </main>
+	</div>
+
+  
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="reportTask">
+	<div class="demo-card-square mdl-shadow--2dp" style="margin-top:30px">
+	  <div class="mdl-card__title mdl-card--expand">
+	    <h2 class="mdl-card__title-text">Report Task</h2>
+	  </div>
+	  <div class="mdl-card__supporting-text">	    
+	    <center>
+	    	<h4>Top Activists</h4>
+	    	<p>System launched @ 3am 9/22/15. No tasks submitted so far. Who will be first?</p>
+				<table class="mdl-data-table mdl-shadow--2dp">
+				  <thead>
+				    <tr>
+				      <th style="text-align:center">Username</th>			      
+				      <th style="text-align:center">Points</th>				      
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td style="text-align:center"><i>Your name here?</i></td>
+				      <td style="text-align:center">0</td>
+				    </tr>
+				  </tbody>
+				</table>
+				<p style="margin-top:15px">Points will be updated manually at least once per day. Eventually they will be allocated instantly via community moderation. See roadmap below.</p>
+			</center>
+	  </div>
+	</div>
+</template>
+
+<template name="roadmap">
+	<div class="demo-card-square mdl-shadow--2dp" style="margin-top:30px">
+	  <div class="mdl-card__title mdl-card--expand">
+	    <h2 class="mdl-card__title-text">Roadmap</h2>
+	  </div>
+	  <div class="mdl-card__supporting-text">	    
+	    <center>
+	    	<h4>Top Activists</h4>
+	    	<p>System launched @ 3am 9/22/15. No tasks submitted so far. Who will be first?</p>
+				<table class="mdl-data-table mdl-shadow--2dp">
+				  <thead>
+				    <tr>
+				      <th style="text-align:center">Username</th>			      
+				      <th style="text-align:center">Points</th>				      
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td style="text-align:center"><i>Your name here?</i></td>
+				      <td style="text-align:center">0</td>
+				    </tr>
+				  </tbody>
+				</table>
+				<p style="margin-top:15px">Points will be updated manually at least once per day. Eventually they will be allocated instantly via community moderation. See roadmap below.</p>
+			</center>
+	  </div>
+	</div>
+</template>
+
+
+<template name="tasks">
+	<div class="demo-card-square mdl-shadow--2dp">
+	  <div class="mdl-card__title mdl-card--expand">
+	    <h2 class="mdl-card__title-text">Tasks</h2>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+	  	<center>
+			<table class="mdl-data-table mdl-shadow--2dp">
+			  <thead>
+			    <tr>
+			      <th style="text-align:center">Task</th>			      
+			      <th style="text-align:center">Limit</th>
+			      <th style="text-align:center">Points</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td style="text-align:center">Call a Portsmouth city councilor</td>
+			      <td style="text-align:center">9 per week</td>
+			      <td style="text-align:center">5</td>
+			    </tr>
+			    <tr>
+			      <td style="text-align:center">Post a flyer in Portsmouth area</td>
+			      <td style="text-align:center">100 per week</td>
+			      <td style="text-align:center">5</td>
+			    </tr>
+			    <tr>
+			      <td style="text-align:center">Recruit a new Uber rider</td>
+			      <td style="text-align:center">None</td>
+			      <td style="text-align:center">10</td>
+			    </tr>
+			    <tr>
+			      <td style="text-align:center">Get a local business to <br />prominently display a flyer</td>
+			      <td style="text-align:center">None</td>
+			      <td style="text-align:center">20</td>
+			    </tr>
+			    <tr>
+			      <td style="text-align:center">Recruit a new Uber driver for Portsmouth</td>
+			      <td style="text-align:center">None</td>
+			      <td style="text-align:center">50</td>
+			    </tr>
+			  </tbody>
+			</table>
+			</center>
+	  </div>
+	  <div class="mdl-card__actions mdl-card--border">
+	    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+	      View Updates
+	    </a>
+	  </div>
+	</div>
+</template>
+
+<!-- Call a city councilor - 5 points
+● Post a flyer in Portsmouth area - 5 points
+● Recruit a new Uber rider - 10 points
+● Get a local business to prominently display a flyer
+- 20 points
+● Recruit a new Uber driver - 50 points
+● Share on Facebook - 1 point per 100 FB friends
+● Drive for Uber - 1 point per hour online
+● Recruit a FREE UBER swarm member: 5% of their
+points forever
+● Or design your own task! -->
+
+<template name="prizes">
+	<div class="demo-card-square mdl-shadow--2dp">
+	  <div class="mdl-card__title mdl-card--expand">
+	    <h2 class="mdl-card__title-text">Prize Pool</h2>
+	  </div>
+	  <div class="mdl-card__supporting-text" style="text-align:center">
+	    <h3 style="margin-bottom:10px">{{ prizepoolBTC }} BTC</h3>
+	    <p style="font-size:18px">~{{ prizepoolUSD }}</p>
+	    <p><strong>Points Exchange Rate:<br />100 points = 0.01 BTC (~$2.30)</strong></p>
+	    <hr>
+	    <p>The prize pool will be distributed proportionally based on points for tasks, about once per week. Exchange rate will not fall below 100=0.01 in the current system. Subject to change when we eventually implement dynamic community voting. See roadmap below.</p>
+	    <hr>
+	    <p>Donations to the prize pool are welcome. 100% of donations will be distributed to activists as described above. <a href="mailto:freeubernh@gmail.com">Email us</a> your name to be credited below. Thank you!</p>	    
+	    <h4>Top Donors</h4>
+	    <center>
+				<table class="mdl-data-table mdl-shadow--2dp">
+				  <thead>
+				    <tr>
+				      <th style="text-align:center">Name</th>			      
+				      <th style="text-align:center">Date</th>
+				      <th style="text-align:center">BTC</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td style="text-align:center">Tom Hudson</td>
+				      <td style="text-align:center">9/21/15</td>
+				      <td style="text-align:center">0.4407</td>
+				    </tr>
+				  </tbody>
+				</table>
+				<h4 style="margin-top:35px">BTC Donation Address</h4>
+				<a href="https://blockchain.info/address/1Jyv7XuassQzR9QVHeHyk4ZEiKhtPnAjaX" target="_blank" style="text-decoration:none">
+				<img src="images/qr.png" width="200">
+				<p style="font-size:12px;margin-top:10px">1Jyv7XuassQzR9QVHeHyk4ZEiKhtPnAjaX</p></a>
+			</center>
+	  </div>
+
+	</div>
+</template>
+
+
+<template name="leaders">
+	<div class="demo-card-square mdl-shadow--2dp">
+	  <div class="mdl-card__title mdl-card--expand">
+	    <h2 class="mdl-card__title-text">Leaderboard</h2>
+	  </div>
+	  <div class="mdl-card__supporting-text">	    
+	    <center>
+	    	<h4>Top Activists</h4>
+	    	<p>System launched @ 3am 9/22/15. No tasks submitted so far. Who will be first?</p>
+				<table class="mdl-data-table mdl-shadow--2dp">
+				  <thead>
+				    <tr>
+				      <th style="text-align:center">Username</th>			      
+				      <th style="text-align:center">Points</th>				      
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td style="text-align:center"><i>Your name here?</i></td>
+				      <td style="text-align:center">0</td>
+				    </tr>
+				  </tbody>
+				</table>
+				<p style="margin-top:15px">Points will be updated manually at least once per day. Eventually they will be allocated instantly via community moderation.</p>
+			</center>
+	  </div>
+	</div>
 </template>

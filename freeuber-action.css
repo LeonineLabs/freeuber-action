@@ -1,1 +1,13 @@
-/* CSS declarations go here */
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  /*background: url('images/ribbon.png') bottom right 15% no-repeat #46B6AC;*/
+  background-color:#444;
+}
+
+.mdl-layout__header {
+	background-color: #000 !important;
+}
