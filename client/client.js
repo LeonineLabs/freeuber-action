@@ -1,3 +1,12 @@
+
+Accounts.ui.config({
+  passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL'
+});
+
+
+
+
+
 function formatCurrency(num)
 {
     num = num.toString().replace(/\$|\,/g, '');

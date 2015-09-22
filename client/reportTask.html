@@ -23,16 +23,23 @@
 					</select>
 
 				  <div class="mdl-textfield mdl-js-textfield">
-				    <textarea class="mdl-textfield__input" type="text" name="descrip" rows= "3" id="descrip" ></textarea>
+				    <textarea class="mdl-textfield__input" type="text" name="descrip" rows="5" width="100%" id="descrip" required></textarea>
 				    <label class="mdl-textfield__label" for="text">Describe what happened. We like details!</label>
 				  </div>
 				
 
 	    	<!-- Raised button with ripple -->
 	    	<center>
+
+	    		{{#if currentUser}}
+
 				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit"> <!-- disabled for now -->
 				  Submit
 				</button>
+
+				{{else}}
+				<h4>Create an account to report a task (top right, sign in -> register)</h4>
+				{{/if}}
 				</center>
 				</form>
 			

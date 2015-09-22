@@ -18,5 +18,22 @@ Meteor.methods({
   getBtcRate: function () {
     this.unblock();
     return Meteor.http.call("GET", "https://blockchain.info/ticker");
+  },
+
+  insertTaskReport: function(report) {
+
+    if (! Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+
+    // Insert a task into the collection
+    TaskReports.insert({
+      task: report.task,
+      desc: report.desc,
+      owner: Meteor.userId(),
+      username: Meteor.user().username,
+      createdAt: new Date() // current time
+    });
+
   }
 });
